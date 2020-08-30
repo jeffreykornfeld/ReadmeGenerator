@@ -1,9 +1,9 @@
 var fs = require('fs');
 var inquirer = require('inquirer')
 
-// Questions
-.prompt([
 
+// Inquirer questions
+inquirer.prompt([
     {
         type: "input",
         name: "username",
@@ -22,7 +22,7 @@ var inquirer = require('inquirer')
         message: "What is your project's name?"
     },{
         type: "input",
-        name: "description",
+        name: "descript",
         message: "Please write a short description of your project."
     },{
         type: "input",
@@ -47,18 +47,36 @@ var inquirer = require('inquirer')
     }
 ])
 
+
 .then(answers => {
+    const {username, email, URL, pName, descript, license, install, runTests, useRepo, repo} = answers;
+    
 
+    //creates the README text
+READMEtext = `${username}
+${email}
+${URL}
+
+## ${pName}
+
+${descript}
+
+${license}
+
+${install}
+
+${runTests}
+
+${useRepo}
+
+${repo}`
+
+//writes the README file
+    fs.writeFile("README.txt", READMEtext, function(err) {
+
+        if (err) {
+          return console.log(err);
+        }
+        console.log("README created!")
+});
 })
-
-// function to write README file
-function writeToFile(fileName, data) {
-}
-
-// function to initialize program
-function init() {
-
-}
-
-// function call to initialize program
-init();
