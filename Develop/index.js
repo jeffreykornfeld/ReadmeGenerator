@@ -60,6 +60,7 @@ READMEtext = `## ${pName}
 [Description](#description)
 [Installation](#installation)
 [Usage](#usage)
+[Contact](#contact)
 
 
 ## *Description* 
@@ -67,14 +68,16 @@ ${description}
 
 This project uses: ${license}
 
+## *Installation*
+
 Command to install: ${install}
 
+## *Usage*
 Command to run tests: ${runTests}
-
 
 ${useRepo}
 
-## Contact Me
+## *Contact*
 ${username}
 ${email}
 ${URL}`
