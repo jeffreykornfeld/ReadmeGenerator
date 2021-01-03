@@ -19,9 +19,9 @@ Command to install: npm install inquirer
 ## *Usage*
 Command to run tests: node index.js
 
-idk
+Answer the prompts in the command to generate a README file.
 
 ## *Contact*
 jeffreykornfeld
 jakornfeld@yahoo.com
-github.com/readmegenerator
+github.com/jeffreykornfeld/ReadmeGenerator
